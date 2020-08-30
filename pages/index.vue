@@ -1,7 +1,7 @@
 <template>
   <centering>
     <template #contents>
-    <mine-sweeper />
+      <mine-sweeper />
     </template>
   </centering>
 </template>
