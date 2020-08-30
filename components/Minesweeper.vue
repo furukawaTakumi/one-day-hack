@@ -1,12 +1,14 @@
 <template>
-<div>
-<table id="field" border="1" bordercolor="#333333">
-  <tr v-for="row in fieldState" v-bind:key="row.id">
-    <td v-for="col in row.line" v-bind:key="col.id"></td>
-  </tr>
-</table>
-<button @click="test">test</button>
-</div>
+  <div>
+    <table id="field" border="1" bordercolor="#333333">
+      <tr v-for="row in fieldState" :key="row.id">
+        <td v-for="col in row.line" :key="col.id" />
+      </tr>
+    </table>
+    <button @click="test">
+      test
+    </button>
+  </div>
 </template>
 
 <script>
@@ -14,9 +16,30 @@ export default {
   data () {
     return {
       fieldState: [
-        { line: [{ opened: false, bomb: false, id: 0 }, { opened: false, bomb: false, id: 1 }, { opened: false, bomb: false, id: 2 }], id: 0 },
-        { line: [{ opened: false, bomb: false, id: 0 }, { opened: false, bomb: false, id: 1 }, { opened: false, bomb: false, id: 2 }], id: 1 },
-        { line: [{ opened: false, bomb: false, id: 0 }, { opened: false, bomb: false, id: 1 }, { opened: false, bomb: false, id: 2 }], id: 2 }
+        {
+          line: [
+            { opened: false, bomb: false, id: 0 },
+            { opened: false, bomb: false, id: 1 },
+            { opened: false, bomb: false, id: 2 }
+          ],
+          id: 0
+        },
+        {
+          line: [
+            { opened: false, bomb: false, id: 0 },
+            { opened: false, bomb: false, id: 1 },
+            { opened: false, bomb: false, id: 2 }
+          ],
+          id: 1
+        },
+        {
+          line: [
+            { opened: false, bomb: false, id: 0 },
+            { opened: false, bomb: false, id: 1 },
+            { opened: false, bomb: false, id: 2 }
+          ],
+          id: 2
+        }
       ]
     }
   },
