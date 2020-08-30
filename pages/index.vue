@@ -1,20 +1,19 @@
 <template>
   <centering>
     <template #contents>
-      <div>MineSweeper Component で置き換える</div>
+    <mine-sweeper />
     </template>
   </centering>
 </template>
 
 <script>
 import Centering from '@/layouts/centering'
+import MineSweeper from '@/components/Minesweeper'
 
 export default {
   components: {
-    Centering
-  },
-  data () {
-    return {}
+    Centering,
+    MineSweeper
   }
 }
 </script>
